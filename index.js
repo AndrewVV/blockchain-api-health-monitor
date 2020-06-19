@@ -1,15 +1,29 @@
-const ApiCallHandler = require('./ApiCallHandler')
-const ConfigHandler = require('./ConfigHandler')
+const ApiCallHandler = require("./ApiCallHandler");
+// const TelegramReportService = require('./TelegramReporter');
+const { config } = require("./config.js");
 
-ApiCallHandler['validateAddress']({
-    ticker:'xlm',
-    address:'GAI3GJ2Q3B35AOZJ36C4ANE3HSS4NK7WI6DNO4ZSHRAX6NG7BMX6VJER'
-}).then(res => console.log(res))
-// ConfigHandler.configParser()
+// TelegramReportService.sendMessage(data);
 
+class MainClass {
+    static mainMethod() {
+        try {
+            const curentConfig = config.filter((item) => {
+                if (item.ticker) return item;
+            });
+            curentConfig.forEach((item) => {
+                for (const method in item.methods) {
+                    ApiCallHandler[method]({
+                        ticker: item.ticker,
+                        server: item.server,
+                        port: item.port,
+                        params: item.methods[method],
+                    }).then((res) => console.log(res));
+                }
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
 
-// console.log(HealthMonitor.)
-// console.log(HealthMonitor.validateAddress({
-//     ticker:'xlm',
-//     address: 'GAI3GJ2Q3B35AOZJ36C4ANE3HSS4NK7WI6DNO4ZSHRAX6NG7BMX6VJER'
-// }))
+MainClass.mainMethod();
