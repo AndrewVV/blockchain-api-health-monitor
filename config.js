@@ -1,14 +1,8 @@
 require('dotenv').config()
-let environment = process.env.NODE_ENV.toLocaleLowerCase();
-console.log(environment)
 
-// process.env.SERVER = "http://51.38.158.241"
-// process.env.PORT = 38635
-// process.env.INTERVAL = 2500
-
-if (environment === 'development'){
-    var DefaultUrl = "http://51.38.158.241"
-    var DefaultPort = "38635"
+if (process.env.NODE_ENV === 'development'){
+    var DefaultUrl = process.env.SERVER;
+    var DefaultPort = process.env.PORT;
     var defaultGetInterval = 2500
     var defaultSendTxInterval = 1500
 } else {
@@ -17,6 +11,7 @@ if (environment === 'development'){
     var defaultGetInterval = 25000
     var defaultSendTxInterval = 1800000
 }
+
 module.exports.config = [
     {
         // 'ticker': 'XLM',        // coment for disable currency

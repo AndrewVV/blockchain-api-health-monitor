@@ -1,23 +1,18 @@
 const fetch = require('node-fetch')
 require('dotenv').config()
+const {
+    SERVER,
+    PORT,
+    INTERVAL,
+    AUTH_TOKEN,
+} = process.env
+const {
+    GET,
+    POST,
+    DELETE
+} = require('./constants')
 
-const AUTH_TOKEN = process.env.AUTH_TOKEN
-console.log(AUTH_TOKEN)
-const GET = 'get'
-const POST = 'post'
-const DELETE = 'delete'
-
-const SERVER = process.env.SERVER
-const PORT = process.env.PORT
-const INTERVAL = process.env.INTERVAL
-
-// console.log(INTERVAL)
-class ApiCallHandler{
-    constructor() {
-
-    }
-    
-
+class ApiCallHandler {
 
     // run(){
     //     // setInterval(()=>{
