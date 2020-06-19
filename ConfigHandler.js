@@ -1,9 +1,10 @@
-const {config} = require('./config.js')
-const GET_ADMIN_BALANCE = 'getAdminBalance';
-const VALIDATE_ADDRES = 'validateAddress';
-const GET_BLOCK_NUMBER = 'getBlockNumber';
-const SEND_CURRENCY = 'sendCurrency';
-
+const { config } = require('./config.js')
+const {
+    GET_ADMIN_BALANCE,
+    VALIDATE_ADDRES,
+    GET_BLOCK_NUMBER,
+    SEND_CURRENCY,
+} = require('./constants')
 
 class ConfigHandler{
         
