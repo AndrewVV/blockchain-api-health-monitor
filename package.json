@@ -1,0 +1,25 @@
+{
+  "name": "blockchain-api-heath-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/alex.serbinov.dci/blockchain-api-heath-monitor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/alex.serbinov.dci/blockchain-api-heath-monitor/issues"
+  },
+  "homepage": "https://gitlab.com/alex.serbinov.dci/blockchain-api-heath-monitor#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
+  }
+}

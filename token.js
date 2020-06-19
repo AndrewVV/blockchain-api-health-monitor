@@ -1,0 +1,1 @@
+process.env.AUTH_TOKEN='Basic Y3J5cHRvLXByb3h5OmF3ZXNvbWUtY3J5cHRvLXBhc3N3b3JkLSE0KiotaGFyZC10by1ndWVzcw=='
