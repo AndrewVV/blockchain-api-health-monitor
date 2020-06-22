@@ -20,10 +20,10 @@ module.exports.config = [
         methods: {
             getAdminBalance: true,
             getBlockNumber: true,
-            validateAddress: {
-                address:
-                    "GAI3GJ2Q3B35AOZJ36C4ANE3HSS4NK7WI6DNO4ZSHRAX6NG7BMX6VJER",
-            },
+            // validateAddress: {
+            //     address:
+            //         "GAI3GJ2Q3B35AOZJ36C4ANE3HSS4NK7WI6DNO4ZSHRAX6NG7BMX6VJER",
+            // },
             sendCurrency: {
                 sendCurrencyInteval: 4000,
                 address:
@@ -34,7 +34,7 @@ module.exports.config = [
         },
     },
     {
-        // ticker: 'XRP', // comment for disable currency
+        ticker: 'XRP', // comment for disable currency
         server: DefaultUrl,
         port: DefaultPort,
         getMethodsInterval: defaultGetInterval,
